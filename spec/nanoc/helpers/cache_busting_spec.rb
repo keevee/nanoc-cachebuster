@@ -5,7 +5,7 @@ describe Nanoc::Helpers::CacheBusting do
   end
 
   describe '#should_cachebust?' do
-    %w{png jpg jpeg gif css js scss sass less coffee html htm}.each do |extension|
+    %w{png jpg jpeg gif css js scss sass less coffee html htm svg}.each do |extension|
       it "should add fingerprint to #{extension} files" do
         subject.cachebust?({ :extension => extension }).should be_true
       end
